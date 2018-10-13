@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,20 +17,14 @@ import { APP_ROUTING } from './app.routes';
 import { FormsModule } from '@angular/forms';
 
 
+// Servicios
+import { ServiceModule } from './services/service.module';
+
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    
-  ],
-  imports: [
-    BrowserModule,
-    APP_ROUTING,
-    PagesModule,
-    FormsModule
-  ],
+  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  imports: [BrowserModule, APP_ROUTING, PagesModule, FormsModule, ServiceModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
